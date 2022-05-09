@@ -1,0 +1,36 @@
+.blogCard {
+  max-width: 380px;
+  max-height: 503px;
+  padding: 5px;
+  background: rgba(60, 83, 215, 0.05);
+  border: 1px solid #84e4a4;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: inherit;
+
+  img {
+    width: 100%;
+    height: 235px;
+  }
+  .blogCard_details {
+    padding: 6%;
+    .blogCard_title {
+      font-family: Gilroy Bold;
+      font-size: 25px;
+      text-transform: uppercase;
+      padding-bottom: 5px;
+    }
+    .blogCard_descp {
+      font-size: 18px;
+      line-height: 21px;
+    }
+    .blogCard_time {
+      font-size: 20px;
+      line-height: 23px;
+      opacity: 0.5;
+      padding-top: 15px;
+    }
+  }
+}

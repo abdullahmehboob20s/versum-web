@@ -1,0 +1,87 @@
+.roadmap {
+  max-width: 1200px;
+  margin: 0 auto;
+  //   overflow-x: hidden;
+  .roadmap_container {
+    display: flex;
+    align-items: flex-start;
+    border-top: 3px solid #16bf86;
+    border-right: 3px solid #16bf86;
+    @media screen and (max-width: 1000px) {
+        border: none;
+        flex-direction: column;
+        align-items: center;
+    }
+    .roadmap_content {
+      max-width: 215px;
+      min-width: 115px;
+      padding: 50px 70px;
+      position: relative;
+      margin-left: -120px;
+      @media screen and (max-width: 1000px) {
+        margin-left: 0;
+        margin: 0 auto;
+        padding: 25px;
+    }
+      .roadmap_time {
+        font-family: Gilroy Bold;
+        font-size: 22px;
+        line-height: 27px;
+        text-align: center;
+        text-transform: uppercase;
+      }
+      .roadmap_msg {
+        font-size: 18px;
+        line-height: 21px;
+        text-align: center;
+      }
+    }
+  }
+  .roadmap_container2 {
+      flex-direction: row-reverse;
+    border-right: none;
+    // margin-left: 220px;
+    @media screen and (max-width: 1000px) {
+        border: none;
+        flex-direction: column;
+        align-items: center;
+    }
+    .roadmap_content {
+      &:nth-child(6) {
+        @media screen and (max-width: 1000px) {
+            display: none;
+        }
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          top: -5px;
+          left: 45px;
+          background: #030528;
+          height: 10px;
+          width: 100%;
+          right: 0;
+        }
+      }
+    }
+  }
+  .radio_img{
+      display: none;
+      user-select:none;
+    @media screen and (max-width: 1000px) {
+        display: block;
+    }
+  }
+  .radio {
+    border: 1px solid #fff;
+    position: absolute;
+    top: -18px;
+    left: 45%;
+    @media screen and (max-width: 1000px) {
+        display: none;
+    }
+    span {
+      background: #16bf86;
+    }
+  }
+}

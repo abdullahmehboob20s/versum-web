@@ -1,0 +1,75 @@
+.accordion_container {
+  font-family: Gilroy;
+  width: 100%;
+  margin: 10px 0;
+  position: relative;
+  background: #030528;
+  box-shadow: 0px 4px 52px rgba(132, 228, 164, 0.31);
+  &::before {
+    content: "";
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(0deg, #030528 0%, #84e4a4 100%);
+    z-index: -1;
+  }
+}
+.accordion,
+.accordion_triggered {
+  background: transparent;
+  background: #030528;
+  color: #fff;
+  cursor: pointer;
+  padding: 18px;
+  padding-left: 20px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-family: Gilroy Bold;
+  font-size: 22px;
+  line-height: 28px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+  @media screen and (max-width: 1000px) {
+    font-size: 20px;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 18px;
+  }
+}
+
+.panel,
+.panel_triggered {
+  transition: all 0.2s linear;
+  letter-spacing: -0.656526px;
+  z-index: 1;
+}
+.panel {
+  color: #030528;
+  font-size: 0px;
+  transform: scale(0%);
+  max-width: 85%;
+  @media screen and (max-width: 1000px) {
+    max-width: 100%;
+  }
+}
+.panel_triggered {
+  color: #b3b3b3;
+  padding: 0 20px 20px 20px;
+  display: block;
+  transform: scale(100%);
+  transition: all 0.3s ease-out;
+  height: 100%;
+  font-size: 19px;
+  line-height: 150%;
+  @media screen and (max-width: 1000px) {
+    font-size: 18px;
+  }
+}

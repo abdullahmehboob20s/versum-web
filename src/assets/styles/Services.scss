@@ -1,0 +1,87 @@
+.services_container {
+  padding: 5% 0;
+  text-align: center;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 40px;
+  @media screen and (max-width: 1600px) {
+    gap: 25px;
+  }
+  @media screen and (max-width: 1200px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media screen and (max-width: 1000px) {
+    padding: 25px 0;
+  }
+  @media screen and (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+  .service_card {
+    max-width: 350px;
+    .service_cardInner {
+      padding: 20px;
+      background: #030528;
+      box-shadow: 0px 4px 52px rgba(132, 228, 164, 0.31);
+      position: relative;
+      min-height: 360px;
+      @media screen and (max-width: 1600px) {
+        padding: 10px;
+        min-height: 370px;
+      }
+      @media screen and (max-width: 1200px) {
+        min-height: 330px;
+        padding: 20px;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        left: -2px;
+        top: -2px;
+        right: -2px;
+        bottom: -2px;
+        background: linear-gradient(0deg, #030528 0%, #84e4a4 100%);
+        z-index: -1;
+      }
+      img {
+        padding: 25px 0;
+        max-height: 100px;
+      }
+      .service_cardTitle {
+        font-family: Gilroy Bold;
+        text-transform: uppercase;
+        font-size: 22px;
+        @media screen and (max-width: 1500px) {
+          font-size: 18px;
+        }
+      }
+      .descp {
+        text-align: center;
+        padding: 15px 0;
+        line-height: 120%;
+        @media screen and (max-width: 1200px) {
+          font-size: 16px;
+          line-height: 130%;
+        }
+      }
+    }
+    .service_cardButton {
+      cursor: pointer;
+      height: 50px;
+      width: 100%;
+      text-align: center;
+      color: #fff;
+      opacity: 0.6;
+      background: transparent;
+      border: 1px solid #ffffff;
+      box-sizing: border-box;
+      box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.36);
+      border-radius: 10px;
+      margin-top: 5px;
+      transition: 0.2s all linear;
+      &:hover{
+          opacity: 1;
+      }
+    }
+  }
+}

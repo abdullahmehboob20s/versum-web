@@ -1,0 +1,223 @@
+.container {
+  width: 100%;
+  margin: 100px 0;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 1rem 0;
+
+  .roadmapBlob {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 98.5%;
+    object-fit: cover;
+    z-index: -1;
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  .roadmapblobVertical {
+    display: none;
+    z-index: -1;
+  }
+
+  & > .card:nth-child(2n) {
+    margin-bottom: 8vw;
+  }
+  & > .card:nth-child(2n + 1) {
+    margin-top: 8.2vw;
+  }
+}
+
+.card {
+  $size: 8.4vw;
+  $title-font-size: 1.7vw;
+  $title-font-size-2: 1.9vw;
+  $desc-font-size: 1.1vw;
+
+  text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: auto;
+
+  .title {
+    font-size: $title-font-size;
+    font-weight: 600;
+    text-align: center;
+    min-width: $size;
+    height: $size;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    border-radius: 50%;
+    flex-direction: column;
+    line-height: 1.2;
+
+    span {
+      font-size: $title-font-size-2;
+      font-weight: 800;
+      color: black;
+    }
+  }
+
+  .desc {
+    font-size: $desc-font-size;
+    font-weight: 300;
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: calc(100% + 4vw);
+    transform: translateX(-50%);
+    width: 100%;
+  }
+
+  &.isReverse {
+    flex-direction: column-reverse;
+    justify-content: center;
+    // padding-bottom: 2rem;
+
+    .desc {
+      top: unset;
+      bottom: calc(100% + 4vw);
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+    margin-bottom: 40px;
+
+    .roadmapBlob {
+      display: none;
+    }
+
+    .roadmapblobVertical {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 165px;
+      height: 94% !important;
+      transform: translateX(-50%) translateY(-50%);
+    }
+
+    & > .card:nth-child(2n) {
+      margin-bottom: 0;
+      margin-left: 4.6rem;
+    }
+    & > .card:nth-child(2n + 1) {
+      margin-top: 0;
+      margin-right: 4.6rem;
+    }
+
+    & > :nth-child(n) {
+      min-height: 100px !important;
+      //   border: 2px solid blue;
+    }
+  }
+
+  //
+  //
+  //
+
+  .card {
+    $size: 70px;
+    $title-font-size: 14px;
+    $title-font-size-2: 16px;
+    $desc-font-size: 14px;
+    $descContainerWidth: 12em;
+
+    width: fit-content;
+
+    .title {
+      font-size: $title-font-size;
+      min-width: $size;
+      height: $size;
+
+      span {
+        font-size: $title-font-size-2;
+      }
+    }
+
+    .desc {
+      left: calc(100% + 45px);
+      right: unset;
+      top: 50%;
+      transform: translateX(0%) translateY(-50%);
+      width: 100%;
+      font-size: $desc-font-size;
+      min-width: $descContainerWidth;
+    }
+
+    &.isReverse {
+      flex-direction: column-reverse;
+      justify-content: center;
+      // padding-bottom: 2rem;
+
+      .desc {
+        top: 50%;
+        // right: unset;
+        right: calc(100% + 45px);
+        left: unset;
+        bottom: unset;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .card {
+    $size: 70px;
+    $title-font-size: 14px;
+    $title-font-size-2: 16px;
+    $desc-font-size: 12px;
+    $descContainerWidth: 10em;
+
+    width: fit-content;
+
+    .title {
+      font-size: $title-font-size;
+      min-width: $size;
+      height: $size;
+
+      span {
+        font-size: $title-font-size-2;
+      }
+    }
+
+    .desc {
+      left: calc(100% + 35px);
+      right: unset;
+      top: 50%;
+      transform: translateX(0%) translateY(-50%);
+      width: 100%;
+      font-size: $desc-font-size;
+      min-width: $descContainerWidth;
+    }
+
+    &.isReverse {
+      flex-direction: column-reverse;
+      justify-content: center;
+      // padding-bottom: 2rem;
+
+      .desc {
+        top: 50%;
+        // right: unset;
+        right: calc(100% + 35px);
+        left: unset;
+        bottom: unset;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}

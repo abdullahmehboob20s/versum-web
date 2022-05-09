@@ -1,0 +1,62 @@
+.teamCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  img {
+    max-height: 185px;
+    max-width: 185px;
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 30px;
+  }
+  .teamCard_details {
+    width: 100%;
+    max-width: 185px;
+    text-align: center;
+    text-transform: uppercase;
+    background: #030528;
+    box-shadow: 0px 4px 52px rgba(132, 228, 164, 0.31);
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    &::before {
+      content: "";
+      position: absolute;
+      left: -2px;
+      top: -2px;
+      right: -2px;
+      bottom: -2px;
+      background: linear-gradient(0deg, #030528 0%, #84e4a4 100%);
+      z-index: -1;
+    }
+    h3 {
+      font-family: Gilroy Bold;
+      font-size: 20px;
+    }
+    .descp {
+      text-align: center;
+    }
+  }
+  i {
+      cursor: pointer;
+    margin: 0 7px;
+  }
+}
+.teams_container {
+    width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-column-gap: 25px;
+  grid-row-gap: 50px;
+  @media screen and (max-width: 1300px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;  
+  }
+  @media screen and (max-width: 1000px) {
+    grid-template-columns: 1fr 1fr 1fr;  
+  }
+  @media screen and (max-width: 600px) {
+    grid-template-columns: 1fr 1fr;  
+  }
+}
