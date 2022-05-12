@@ -5,6 +5,7 @@
   justify-content: center;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 40px;
+
   @media screen and (max-width: 1600px) {
     gap: 25px;
   }
@@ -19,7 +20,11 @@
   }
   .service_card {
     max-width: 350px;
+    display: flex;
+    flex-direction: column;
+
     .service_cardInner {
+      flex: 1;
       padding: 20px;
       background: #030528;
       box-shadow: 0px 4px 52px rgba(132, 228, 164, 0.31);
@@ -79,8 +84,8 @@
       border-radius: 10px;
       margin-top: 5px;
       transition: 0.2s all linear;
-      &:hover{
-          opacity: 1;
+      &:hover {
+        opacity: 1;
       }
     }
   }
